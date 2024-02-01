@@ -2096,8 +2096,6 @@ spare
 sumac
 torch
 video
-
-
 arise
 blitz
 carve
@@ -2117,8 +2115,6 @@ spark
 sunny
 torso
 vigil
-
-
 armor
 bloat
 caste
@@ -2138,8 +2134,6 @@ spasm
 super
 torus
 vigor
-
-
 aroma
 block
 catch
@@ -2159,8 +2153,6 @@ spawn
 surer
 total
 villa
-
-
 arose
 bloke
 cater
@@ -2180,8 +2172,6 @@ speak
 surge
 totem
 vinyl
-
-
 array
 blond
 catty
@@ -2201,8 +2191,6 @@ spear
 surly
 touch
 viola
-
-
 arrow
 blood
 caulk
@@ -2222,8 +2210,6 @@ speck
 sushi
 tough
 viper
-
-
 arson
 bloom
 cause
@@ -2243,8 +2229,6 @@ speed
 swami
 towel
 viral
-
-
 artsy
 blown
 cavil
@@ -2264,8 +2248,6 @@ spell
 swamp
 tower
 virus
-
-
 ascot
 bluer
 cease
@@ -2285,8 +2267,6 @@ spelt
 swarm
 toxic
 visit
-
-
 ashen
 bluff
 cedar
@@ -2306,8 +2286,6 @@ spend
 swash
 toxin
 visor
-
-
 aside
 blunt
 cello
