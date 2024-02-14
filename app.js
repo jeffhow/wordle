@@ -9,14 +9,6 @@ const letters = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase();
 // a new Set is like an array, but only contains unique values
 const alpha = new Set(letters.split(''));
 
-// this is an array with three arrays inside it.
-const keyboard = [
-     // .split('') creates an array from the string
-    "QWERTYUIOP".split(''), // ["Q", "W", "E", ... "P"]
-    "ASDFGHJKL".split(''), 
-    "ZXCVBNM".split('')
-]
-
 // attach a function to the browser window.
 // when a key is released (keyup), the logkey() 
 // function will be called
@@ -53,16 +45,29 @@ function logKey(evt) { // evt is the event.
     }
 }
 
+// this is an array with three arrays inside it.
+const keyboard = [
+    // .split('') creates an array from the string
+   "QWERTYUIOP".split(''), // ["Q", "W", "E", ... "P"]
+   "ASDFGHJKL".split(''), 
+   "ZXCVBNM".split('')
+]
 function render() {
     // This searches the HTML doc for 
     // <main id="root"></main>
     // then saves it in JS
     const main = document.querySelector('#root');
-    let template = ``;
+    let template = `<div class="keyboard">`;
     
     for (let i = 0; i<keyboard.length; i++) {
-        console.log(i, keyboard[i]);
+        template += `<div class="row">`
+        for (let j=0; j<keyboard[i].length; j++) {
+            template += `<div class="key">${ keyboard[i][j] }</div>`
+        }
+        template += `</div>`
     }
+
+    template += `</div>`
     
     main.innerHTML = template;
 
