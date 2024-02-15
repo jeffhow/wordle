@@ -51,7 +51,8 @@ const keyboard = [
    "QWERTYUIOP".split(''), // ["Q", "W", "E", ... "P"]
    "ASDFGHJKL".split(''), 
    "ZXCVBNM".split('')
-]
+];
+
 function render() {
     // This searches the HTML doc for 
     // <main id="root"></main>
@@ -60,14 +61,14 @@ function render() {
     let template = `<div class="keyboard">`;
     
     for (let i = 0; i<keyboard.length; i++) {
-        template += `<div class="row">`
+        template += `<div class="row">`;
         for (let j=0; j<keyboard[i].length; j++) {
             template += `<div class="key">${ keyboard[i][j] }</div>`
         }
-        template += `</div>`
+        template += `</div>`;
     }
 
-    template += `</div>`
+    template += `</div>`;
     
     main.innerHTML = template;
 
