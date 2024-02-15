@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Wellfleet&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: rgb(18, 18, 19);
     color: rgb(248,248,248);
-
 }
 
 header h1 {
@@ -22,6 +25,7 @@ header h1 {
 }
 
 .row {
+    /* Flexbox Rules 🤘 */
     display: flex;
     justify-content: center;
     gap: 6px;
@@ -29,7 +33,7 @@ header h1 {
 
 .key {
     background-color: rgb(129,131,132);
-    width: 43px;
+    min-width: 43px;
     height: 58px;
     border-radius: 5px;
     text-align: center;
@@ -37,4 +41,5 @@ header h1 {
     font-family: "Libre Franklin", sans-serif;
     font-weight: bold;
     font-size: 1.25em;
+    padding: 0 10px;
 }

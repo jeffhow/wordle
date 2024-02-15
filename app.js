@@ -52,6 +52,9 @@ const keyboard = [
    "ASDFGHJKL".split(''), 
    "ZXCVBNM".split('')
 ];
+keyboard[2].unshift('ENTER');
+keyboard[2].push('BACK');
+
 
 function render() {
     // This searches the HTML doc for 
