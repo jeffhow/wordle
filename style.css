@@ -43,3 +43,22 @@ header h1 {
     font-size: 1.25em;
     padding: 0 10px;
 }
+
+.board {
+    display: grid;
+    width: 300px;
+    height: 360px;
+    grid-template-columns: repeat(5,1fr);
+    margin: auto auto 25px auto;
+}
+
+.board div {
+    border: rgb(58,58,60) solid 2px; 
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: bold;
+    font-size: 1.25em;
+}
