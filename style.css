@@ -16,7 +16,7 @@ header h1 {
   text-align: center;
 }
 
-.keyboard {
+.keys {
     display: flex;
     flex-direction: column;
     justify-content: center;

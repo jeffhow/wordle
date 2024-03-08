@@ -1,23 +1,21 @@
 const secret = "ABACK";
+const grid = document.querySelector('#root .grid');
+const keys = document.querySelector('#root .keys');
 
-const letters = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase();
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const alpha = new Set(letters.split(''));
 
-let tries = [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [], // 6 tries
-];
+let tries = Array.from({length:6}, (_) => {return {}});
 
 let attempt = 0;
 
-window.addEventListener('keyup', logKey);
+window.addEventListener('keyup', handleKey);
+
+function handleKey(evt) {
+    console.log(evt.type);
+}
 
 function logKey(evt) { 
-    console.log(evt);
     let matches = [0,0,0,0,0];
     
     if (evt.key.toUpperCase() == "ENTER") {
@@ -46,17 +44,34 @@ function logKey(evt) {
     render(matches);
 }
 
-const keyboard = [
-   "QWERTYUIOP".split(''),
-   "ASDFGHJKL".split(''), 
-   "ZXCVBNM".split('')
-];
-keyboard[2].unshift('ENTER');
-keyboard[2].push('BACK');
+
+function renderKeyboard() {
+    const keyboard = [
+       "QWERTYUIOP".split(''),
+       "ASDFGHJKL".split(''), 
+       "ZXCVBNM".split('')
+    ];
+    keyboard[2].unshift('ENTER');
+    keyboard[2].push('BACK');
+    
+    let keyTemplate = ``;
+    
+    for (let i = 0; i<keyboard.length; i++) {
+        keyTemplate += `<div class="row">`;
+        for (let j=0; j<keyboard[i].length; j++) {
+            keyTemplate += `<div class="key">${ keyboard[i][j] }</div>`
+        }
+        keyTemplate += `</div>`;
+    }
+    keys.innerHTML = keyTemplate;
+    console.log(keyTemplate)
+    console.log(keyboard)
+    console.log(keyboard.innerHTML)
+    
+}
 
 function render( matches ) {
     console.log(matches)
-    const main = document.querySelector('#root');
     let board = `<div class="board">`;
 
     for (let i=0; i<tries.length; i++) {
@@ -66,6 +81,14 @@ function render( matches ) {
     }
     board += `</div>`;
 
+
+    const keyboard = [
+        "QWERTYUIOP".split(''),
+        "ASDFGHJKL".split(''), 
+        "ZXCVBNM".split('')
+     ];
+     keyboard[2].unshift('ENTER');
+     keyboard[2].push('BACK');
     let keyTemplate = `<div class="keyboard">`;
     
     for (let i = 0; i<keyboard.length; i++) {
@@ -103,4 +126,4 @@ function evaluate(guess) {
 }
 
 
-render([0,0,0,0,0]);
+// render([0,0,0,0,0]);
